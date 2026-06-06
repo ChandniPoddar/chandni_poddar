@@ -263,7 +263,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           <div className="flex gap-4">
             {project.githubUrl && (
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-3 rounded-xl glass border border-border text-center text-sm font-semibold text-text hover:border-primary/40 transition-colors flex items-center justify-center gap-2">
-                <Github className="w-4 h-4" /> GitHub
+                <span className="w-4 h-4 flex items-center justify-center">🐙</span> GitHub
               </a>
             )}
             {project.liveUrl && (

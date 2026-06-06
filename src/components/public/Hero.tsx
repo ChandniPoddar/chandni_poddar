@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { Mail, Download, ArrowDown, ExternalLink } from 'lucide-react';
 
@@ -12,6 +12,7 @@ interface HeroData {
   profileImage: string;
   resumeUrl: string;
   socialLinks: { platform: string; url: string; icon: string }[];
+  ctaText?: string;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -150,12 +151,12 @@ export default function Hero() {
       .catch(() => {});
   }, []);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
   };
