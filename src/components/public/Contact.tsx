@@ -126,7 +126,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="glass-strong rounded-3xl p-8 border border-border">
+            <div className="glass-strong rounded-3xl p-8 border border-border bg-background-card/80 dark:bg-background-card/70">
               {sent ? (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -143,7 +143,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-text-muted text-xs mb-1.5 block">Name *</label>
+                      <label className="text-text dark:text-text-muted text-xs mb-1.5 block">Name *</label>
                       <input
                         type="text"
                         name="name"
@@ -151,11 +151,11 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="Your name"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
+                        className="w-full px-4 py-3 rounded-xl bg-background-card border border-slate-300 text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
                       />
                     </div>
                     <div>
-                      <label className="text-text-muted text-xs mb-1.5 block">Email *</label>
+                      <label className="text-text dark:text-text-muted text-xs mb-1.5 block">Email *</label>
                       <input
                         type="email"
                         name="email"
@@ -163,13 +163,13 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="your@email.com"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
+                        className="w-full px-4 py-3 rounded-xl bg-background-card border border-slate-300 text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-text-muted text-xs mb-1.5 block">Subject *</label>
+                    <label className="text-text dark:text-text-muted text-xs mb-1.5 block">Subject *</label>
                     <input
                       type="text"
                       name="subject"
@@ -177,12 +177,12 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       placeholder="What's it about?"
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
+                      className="w-full px-4 py-3 rounded-xl bg-background-card border border-slate-300 text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm"
                     />
                   </div>
 
                   <div>
-                    <label className="text-text-muted text-xs mb-1.5 block">Message *</label>
+                    <label className="text-text dark:text-text-muted text-xs mb-1.5 block">Message *</label>
                     <textarea
                       name="message"
                       value={form.message}
@@ -190,7 +190,7 @@ export default function Contact() {
                       required
                       rows={5}
                       placeholder="Tell me about your project or just say hi..."
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-background-card border border-slate-300 text-text placeholder-text-muted focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/20 transition-all text-sm resize-none"
                     />
                   </div>
 

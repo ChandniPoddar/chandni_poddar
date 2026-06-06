@@ -73,12 +73,6 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <Link
-            href="/admin/login"
-            className="text-xs text-text-muted hover:text-text transition-colors"
-          >
-            Admin
-          </Link>
           <ThemeToggle />
           <a
             href="#contact"
